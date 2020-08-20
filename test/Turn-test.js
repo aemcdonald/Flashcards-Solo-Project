@@ -5,9 +5,16 @@ const Turn = require('../src/Turn');
 const Card = require('../src/Card');
 
 describe('Turn Class', () => {
+  let turn;
+  let card;
+
+  beforeEach(() => {
+    turn = new Turn('pug', card);
+    card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+
+  });
 
   it('should be a function', () => {
-    const turn = new Turn();
     expect(Turn).to.be.a('function');
   });
 
@@ -22,49 +29,49 @@ describe('Turn Class', () => {
   })
 
   it('Should take in a current Card', () => {
-    const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-    const turn = new Turn('pug', card);
+    card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    turn = new Turn('pug', card);
     expect(turn.currentCard).to.equal(card);
   });
 
   it('Should return a guess', () => {
-    const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-    const turn = new Turn('pug', card);
+    //const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    //const turn = new Turn('pug', card);
 
     expect(turn.returnGuess()).to.equal(turn.guess);
   });
 
   it('Should return the Card', () => {
-    const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-    const turn = new Turn('pug', card);
+    //const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    //const turn = new Turn('pug', card);
 
     expect(turn.returnCard()).to.equal(turn.currentCard);
   });
 
   it('Should check if a guess is incorrect', () => {
-    const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-    const turn = new Turn('pug', card);
+    //const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    //const turn = new Turn('pug', card);
 
     expect(turn.evaluateGuess()).to.be.false;
   });
 
   it('Should check if a guess is correct', () => {
-    const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-    const turn = new Turn('sea otter', card);
+    //const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    turn = new Turn('sea otter', card);
 
     expect(turn.evaluateGuess()).to.be.true;
   });
 
   it('Should give feedback if a guess is incorrect', () => {
-    const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-    const turn = new Turn('pug', card);
+    //const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    //const turn = new Turn('pug', card);
 
     expect(turn.giveFeedback()).to.equal('Incorrect!');
   });
 
   it('Should give feedback if a guess is correct', () => {
-    const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-    const turn = new Turn('sea otter', card);
+    //const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    turn = new Turn('sea otter', card);
 
     expect(turn.giveFeedback()).to.equal('Correct!');
   });
