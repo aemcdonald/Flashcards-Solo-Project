@@ -11,7 +11,6 @@ describe('Game', () => {
 
   it('Should be an instance of Game', () => {
     let game = new Game();
-
     expect(game).to.be.an.instanceof(Game);
   });
 });

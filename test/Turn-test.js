@@ -11,7 +11,6 @@ describe('Turn Class', () => {
   beforeEach(() => {
     turn = new Turn('pug', card);
     card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-
   });
 
   it('should be a function', () => {

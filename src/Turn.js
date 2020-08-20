@@ -3,12 +3,15 @@ class Turn {
     this.guess = guess;
     this.currentCard = currentCard;
   }
+
   returnGuess() {
     return this.guess;
   }
+
   returnCard() {
     return this.currentCard;
   }
+
   evaluateGuess() {
     if (this.guess === this.currentCard.correctAnswer) {
       return true;
@@ -16,6 +19,7 @@ class Turn {
       return false;
     }
   }
+  
   giveFeedback() {
     if (this.evaluateGuess()) {
       return 'Correct!';
