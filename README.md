@@ -11,7 +11,7 @@ This program simulates a set of flash cards through the command line. A user is 
 
 link to Giphy image: https://imgur.com/dp8jSx0
 
-## Installation and Setup
+## Installation and Setup 
 
 To run and play the application:
 - after cloning the repo, `run npm install`.
