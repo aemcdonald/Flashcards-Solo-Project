@@ -9,6 +9,8 @@ This program simulates a set of flash cards through the command line. A user is 
 ## A GIF of the Working Application
 ![Terminal view of project](https://i.imgur.com/dp8jSx0.gif)
 
+link to Giphy image: https://imgur.com/dp8jSx0
+
 ## Installation and Setup
 
 To run and play the application:
